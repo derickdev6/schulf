@@ -1,0 +1,7 @@
+asgiref==3.5.0
+autopep8==1.6.0
+pycodestyle==2.8.0
+pymongo==4.1.1
+sqlparse==0.4.2
+style==1.1.0
+toml==0.10.2

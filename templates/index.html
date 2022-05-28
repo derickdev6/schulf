@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+    <title>Inicio</title>
+</head>
+<body>
+
+    <nav>
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/s-bahn-1-logo-png-transparent.png" alt="logo" style="width:60px">
+        <!-- <section>
+            <h1>Schulf</h1>
+            <p>Tu tutor de programacion</p>
+        </section> -->
+        <ul>
+            <li><a href="home">Inicio</a></li>
+            <li><a href="guides">Guías</a></li>
+            <li><a href="">Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <header>
+
+        <h1>Schulf</h1>
+        <h2>Tu guidelist de programacion favorita</h2>
+
+    </header>
+
+    <main>
+
+        <p class="presentation">Esta es la más reciente guia de programacion agregada al sitio, espero sea de ayuda ;)</p>
+
+        <div class="lastguide">
+            <img src="https://avatars.dicebear.com/api/identicon/{{last_guide.title}}.svg" alt="img id de guia">
+            <section>
+            <p class="title">{{last_guide.title}}</p>
+            <p class="date">{{last_guide.date}}</p>
+            <p class="body">{{last_guide.body[0:150]}}...</p>
+            <!-- <a href="{{last_guide.link}}" target="_blank">+</a> -->
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <p>Developed by <a href="http://twitter.com/derickode">Derick</a></p>
+        <p>If you want to contribute check the <a href="https://github.com/derickdev6/schulf">Schulf repo</a></p>
+
+    </footer>
+
+</body>
+</html>
