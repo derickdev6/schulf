@@ -29,20 +29,17 @@
     </header>
 
     <main>
-        <ul>
         {% for guide in all_guides %}
-        <div class="lastguide">
+        <div class="guide_card">
             <img src="https://avatars.dicebear.com/api/identicon/{{guide.title}}.svg" alt="img id de guia">
             <section>
-            <p class="title">{{guide.title}}</p>
+            <a class="title" href="guide/{{guide.id}}">{{guide.title}}</a>
             <p class="date">{{guide.date}}</p>
             <p class="body">{{guide.body[0:150]}}...</p>
-            <!-- <a href="{{guide.link}}" target="_blank">+</a> -->
             </section>
 
         </div>
         {% endfor %}
-        </ul>
     </main>
 
     <footer>

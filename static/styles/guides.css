@@ -61,7 +61,7 @@ main .presentation{
     font-size: 2rem;
 }
 
-main .lastguide{
+main .guide_card{
     width: 80%;
     height: 12rem;
     margin: 3rem auto;
@@ -70,27 +70,29 @@ main .lastguide{
     border-radius: 4rem;
     background-color: rgb(57, 160, 79, .1)
 }
-main .lastguide img{
+main .guide_card img{
     height: 10rem;
     width: 10rem;
     margin: auto 0;
 }
-main .lastguide section{
+main .guide_card section{
     flex-grow: 1;
     margin: 0 0 0 3rem;
     overflow: hidden;
 }
-main .lastguide .title{
-    margin: 1rem 0;
+main .guide_card .title{
+    margin: 3rem 0;
     font-size: 1.8rem;
     font-weight: bold;
+    color: black;
+    text-decoration: none;
 }
-main .lastguide .date{
+main .guide_card .date{
     /* margin: 1rem 0; */
     font-size: 1.2rem;
     font-style: italic;
 }
-main .lastguide .body{
+main .guide_card .body{
     /* margin: 1rem 0; */
     font-size: 1.4rem;
 }

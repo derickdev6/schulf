@@ -36,8 +36,8 @@
         <div class="lastguide">
             <img src="https://avatars.dicebear.com/api/identicon/{{last_guide.title}}.svg" alt="img id de guia">
             <section>
-            <p class="title">{{last_guide.title}}</p>
-            <p class="date">{{last_guide.date}}</p>
+                <a class="title" href="guide/{{last_guide.id}}">{{last_guide.title}}</a>
+                <p class="date">{{last_guide.date}}</p>
             <p class="body">{{last_guide.body[0:150]}}...</p>
             <!-- <a href="{{last_guide.link}}" target="_blank">+</a> -->
             </section>
