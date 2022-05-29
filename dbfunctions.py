@@ -10,12 +10,22 @@ def get_last_guide():
     data = cursor.fetchone()
     cursor.close()
     return data
+def get_guide_by_id(id):
+    # Connects to DB
+    sqliteConnection = sqlite3.connect('schulfDB.sqlite')
+    cursor = sqliteConnection.cursor()
+    # Print statement and execution
+    print("Guide by id execution")
+    cursor.execute(f"""SELECT * FROM Guides WHERE id = {id}""")
+    data = cursor.fetchone()
+    cursor.close()
+    return data
 def get_all_guides():
     # Connects to DB
     sqliteConnection = sqlite3.connect('schulfDB.sqlite')
     cursor = sqliteConnection.cursor()
     # Print statement and execution
-    print("Last Guide execution")
+    print("All Guides execution")
     cursor.execute("""SELECT * FROM Guides ORDER BY date desc""")
     data = cursor.fetchall()
     cursor.close()

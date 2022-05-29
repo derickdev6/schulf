@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/guides.css') }}">
-    <title>Guias</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/guide.css') }}">
+    <title>Guia - {{guide.title}}</title>
 </head>
 <body>
 
@@ -17,39 +17,29 @@
         </section> -->
         <ul>
             <li><a href="/home">Inicio</a></li>
-            <li><a href="guides">Guias</a></li>
+            <li><a href="/guides">Guías</a></li>
             <li><a href="">Nosotros</a></li>
         </ul>
     </nav>
 
     <header>
 
-        <h1>Guías</h1>
+        <h1>{{guide.title}}</h1>
 
     </header>
 
     <main>
-        <ul>
-        {% for guide in all_guides %}
-        <div class="lastguide">
-            <img src="https://avatars.dicebear.com/api/identicon/{{guide.title}}.svg" alt="img id de guia">
-            <section>
-            <p class="title">{{guide.title}}</p>
-            <p class="date">{{guide.date}}</p>
-            <p class="body">{{guide.body[0:150]}}...</p>
-            <!-- <a href="{{guide.link}}" target="_blank">+</a> -->
-            </section>
 
-        </div>
-        {% endfor %}
-        </ul>
+        <p>{{guide.body}}</p>
+
+        <iframe src="https://www.youtube.com/embed/Rj91TGFkj5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
     </main>
 
     <footer>
 
         <p>Developed by <a href="http://twitter.com/derickode">Derick</a></p>
         <p>If you want to contribute check the <a href="https://github.com/derickdev6/schulf">Schulf repo</a></p>
-
     </footer>
 
 </body>

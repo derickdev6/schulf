@@ -26,3 +26,10 @@ def guides():
         all_guides.append(guide)
 
     return render_template('guides.html', all_guides=all_guides)
+
+
+@app.route('/guide/<id>')
+def guide(id):
+    query = dbf.get_guide_by_id(id)
+    guide = Guide(query[0], query[1], query[2], query[3], query[4])
+    return render_template('guide.html', guide=guide)
